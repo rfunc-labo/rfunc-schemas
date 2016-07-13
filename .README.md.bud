@@ -1,0 +1,36 @@
+/**
+ * Bud file for README.md
+ */
+
+'use strict'
+
+const { readmeMdBud } = require('ape-tmpl')
+const aglob = require('aglob')
+const path = require('path')
+const pkg = require('./package.json')
+
+module.exports = readmeMdBud({
+  pkg,
+  repo: pkg.repository,
+  sections: 'doc/guides/*.md.hbs',
+  badges: {
+    travis: true,
+    codeclimate: true,
+    codeclimateCoverage: true,
+    gemnasium: false,
+    npm: true,
+    standard: true
+  },
+  overview: 'doc/overview.md',
+  links: require('./doc/links'),
+  vars: {
+    schemas: aglob.sync('lib/*_schema.json').map((filename) => ({
+      name: path.basename(filename),
+      filename
+    }))
+  }
+})
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

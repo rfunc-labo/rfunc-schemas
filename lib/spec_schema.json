@@ -1,0 +1,68 @@
+{
+  "id": "http://okunishitaka.com/rfunc/invoke-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Invoke Schema",
+  "description": "Schema for spec definition",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "patternProperties": {
+    "^[^\\$]": {
+      "$ref": "#/definitions/Method"
+    }
+  },
+  "definitions": {
+    "Method": {
+      "type": "object",
+      "properties": {
+        "desc": {
+          "$ref": "#/definitions/Desc"
+        },
+        "params": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MethodParam"
+          }
+        },
+        "returns": {
+          "$ref": "#/definitions/MethodReturn"
+        }
+      }
+    },
+    "MethodParam": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/Name"
+        },
+        "type": {
+          "$ref": "#/definitions/Type"
+        },
+        "desc": {
+          "$ref": "#/definitions/Desc"
+        }
+      }
+    },
+    "MethodReturn": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/Type"
+        },
+        "desc": {
+          "$ref": "#/definitions/Desc"
+        }
+      }
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "string"
+    }
+  }
+}

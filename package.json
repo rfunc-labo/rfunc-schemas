@@ -1,0 +1,45 @@
+{
+  "name": "rfunc-schemas",
+  "version": "1.0.0",
+  "description": "Schemas for rfunc",
+  "main": "lib",
+  "scripts": {
+    "test": "./ci/test.js",
+    "prepublish": "./ci/build.js"
+  },
+  "repository": "rfunc-labo/rfunc-schemas",
+  "keywords": [
+    "rfunc"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "email": "okunishitaka.com@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rfunc-labo/rfunc-schemas/issues"
+  },
+  "homepage": "https://github.com/rfunc-labo/rfunc-schemas#readme",
+  "dependencies": {
+    "co": "^4.6.0"
+  },
+  "devDependencies": {
+    "aglob": "^1.0.1",
+    "ape-covering": "^3.0.3",
+    "ape-formatting": "^1.0.2",
+    "ape-releasing": "^4.0.1",
+    "ape-reporting": "^3.0.1",
+    "ape-tasking": "^4.0.3",
+    "ape-testing": "^4.0.1",
+    "ape-tmpl": "^5.0.12",
+    "ape-updating": "^4.0.4",
+    "aschema": "^1.0.6",
+    "coz": "^6.0.5",
+    "injectmock": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  }
+}
