@@ -55,6 +55,7 @@ Schemas for rfunc
 <!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
 <a name="section-doc-guides-01-installation-md"></a>
+
 Installation
 -----
 
@@ -68,6 +69,7 @@ $ npm install rfunc-schemas --save
 <!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
 <a name="section-doc-guides-02-usage-md"></a>
+
 Usage
 ---------
 
@@ -90,6 +92,7 @@ let errors = aschema(InvokeSchema).validate({
 <!-- Section from "doc/guides/03.Schemas.md.hbs" Start -->
 
 <a name="section-doc-guides-03-schemas-md"></a>
+
 Schemas
 ------
 
