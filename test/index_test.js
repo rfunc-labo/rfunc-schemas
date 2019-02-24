@@ -6,14 +6,13 @@
 
 const index = require('../lib/index')
 const assert = require('assert')
-const co = require('co')
 
 describe('index', function () {
-  it('Eval props', () => co(function * () {
+  it('Eval props', () => {
     for (let name of Object.keys(index)) {
-      assert.ok(index[ name ])
+      assert.ok(index[name])
     }
-  }))
+  })
 })
 
 /* global describe, it */
